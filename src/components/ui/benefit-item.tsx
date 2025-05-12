@@ -9,13 +9,13 @@ interface BenefitItemProps {
 
 export function BenefitItem({ icon, title, description }: BenefitItemProps) {
   return (
-    <div className="flex flex-col md:flex-row items-start gap-4 mb-12">
-      <div className="text-causal-accent text-2xl flex-shrink-0 mb-2 md:mb-0">
+    <div className="backdrop-blur-sm bg-causal-blue/40 border border-causal-blue-light/30 rounded-xl p-6 hover:shadow-lg hover:border-causal-blue-light/50 transition-all duration-300">
+      <div className="text-causal-accent text-3xl flex-shrink-0 mb-4">
         {icon}
       </div>
       <div>
-        <h3 className="text-xl font-semibold mb-2 text-causal-text">{title}</h3>
-        <p className="text-causal-text-secondary">{description}</p>
+        <h3 className="text-xl font-semibold mb-3 text-causal-text">{title}</h3>
+        <p className="text-causal-text-secondary text-sm">{description}</p>
       </div>
     </div>
   )
