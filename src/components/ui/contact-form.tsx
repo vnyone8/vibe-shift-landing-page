@@ -38,7 +38,7 @@ export function ContactForm() {
   };
   
   return (
-    <div className="backdrop-blur-xl bg-causal-blue/20 border border-causal-blue-light/40 rounded-xl p-8 group relative overflow-hidden">
+    <div className="backdrop-blur-xl bg-causal-blue/20 border border-causal-accent/40 rounded-xl p-8 group relative overflow-hidden">
       {/* Glow effect */}
       <div className="absolute -inset-1 bg-gradient-to-r from-blue-500/30 via-causal-accent/20 to-blue-400/30 rounded-xl blur opacity-40 group-hover:opacity-70 transition duration-500"></div>
       
