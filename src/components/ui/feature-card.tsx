@@ -9,12 +9,17 @@ interface FeatureCardProps {
 
 export function FeatureCard({ icon, title, description }: FeatureCardProps) {
   return (
-    <div className="bg-causal-blue p-6 rounded-xl hover:shadow-lg transition-all duration-300 border border-causal-blue-light">
-      <div className="text-causal-accent mb-4 text-2xl">
-        {icon}
+    <div className="backdrop-blur-xl bg-causal-blue/30 border border-causal-blue-light/40 rounded-xl p-6 hover:shadow-xl transition-all duration-300 group relative overflow-hidden">
+      {/* Glow effect */}
+      <div className="absolute -inset-1 bg-gradient-to-r from-blue-400/20 to-purple-500/20 rounded-xl blur opacity-0 group-hover:opacity-70 transition duration-500"></div>
+      
+      <div className="relative z-10">
+        <div className="text-causal-accent mb-4 text-3xl bg-causal-blue-dark/60 p-3 rounded-lg inline-block">
+          {icon}
+        </div>
+        <h3 className="text-xl font-semibold mb-3 text-causal-text">{title}</h3>
+        <p className="text-causal-text-secondary">{description}</p>
       </div>
-      <h3 className="text-xl font-semibold mb-2 text-causal-text">{title}</h3>
-      <p className="text-causal-text-secondary">{description}</p>
     </div>
   )
 }

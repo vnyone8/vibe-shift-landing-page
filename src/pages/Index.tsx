@@ -5,7 +5,9 @@ import { Footer } from "@/components/footer";
 import { ButtonCTA } from "@/components/ui/button-cta";
 import { FeatureCard } from "@/components/ui/feature-card";
 import { BenefitItem } from "@/components/ui/benefit-item";
-import { Check } from "lucide-react";
+import { BentoGrid, BentoItem } from "@/components/ui/bento-grid";
+import { FounderCard } from "@/components/ui/founder-card";
+import { Check, LineChart, ShieldCheck, BarChart3, Lightbulb, ChevronRight, TrendingUp, BarChartHorizontal } from "lucide-react";
 
 const Index = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -18,12 +20,20 @@ const Index = () => {
     <div className="min-h-screen flex flex-col">
       <Navbar />
       
-      {/* Hero Section */}
-      <section className="gradient-bg pt-28 pb-20 md:pt-40 md:pb-32 relative grid-pattern">
-        <div className="container mx-auto px-4">
+      {/* Hero Section - Enhanced with more dynamic gradients and effects */}
+      <section className="bg-gradient-to-br from-causal-blue-dark via-causal-blue to-causal-blue-dark pt-28 pb-20 md:pt-40 md:pb-32 relative overflow-hidden">
+        {/* Dynamic background elements */}
+        <div className="absolute inset-0 overflow-hidden">
+          <div className="absolute w-96 h-96 rounded-full bg-causal-blue-light/20 blur-3xl -top-48 -right-24 animate-float"></div>
+          <div className="absolute w-96 h-96 rounded-full bg-causal-accent/10 blur-3xl -bottom-48 -left-24 animate-float animation-delay-2000"></div>
+          <div className="absolute w-full h-full bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-transparent to-causal-blue-dark/70"></div>
+          <div className="absolute inset-0 bg-grid-pattern opacity-20"></div>
+        </div>
+        
+        <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-4xl mx-auto text-center">
             <h1 
-              className={`text-4xl md:text-6xl font-bold mb-6 transition-all duration-1000 ${isVisible ? 'opacity-100' : 'opacity-0 translate-y-10'}`}
+              className={`text-4xl md:text-6xl font-bold mb-6 transition-all duration-1000 bg-gradient-to-r from-white via-causal-text to-causal-text-secondary bg-clip-text text-transparent ${isVisible ? 'opacity-100' : 'opacity-0 translate-y-10'}`}
             >
               Your Extended Hedge Fund Research Team
             </h1>
@@ -33,55 +43,116 @@ const Index = () => {
               Hire AI agents that reason like seasoned analysts—and scale like machines
             </p>
             <div className={`transition-all duration-1000 delay-500 ${isVisible ? 'opacity-100' : 'opacity-0 translate-y-10'}`}>
-              <ButtonCTA size="lg" className="font-medium">Apply for Early Access</ButtonCTA>
+              <ButtonCTA size="lg" className="font-medium relative overflow-hidden group">
+                <span className="relative z-10">Apply for Early Access</span>
+                <span className="absolute inset-0 bg-gradient-to-r from-causal-accent to-causal-accent-hover opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
+              </ButtonCTA>
             </div>
           </div>
         </div>
+      </section>
 
-        {/* Animated background effect */}
-        <div className="hidden md:block absolute inset-0 overflow-hidden pointer-events-none">
-          <div className="absolute w-96 h-96 rounded-full bg-causal-blue-light/20 blur-3xl -top-48 -right-24 animate-float"></div>
-          <div className="absolute w-96 h-96 rounded-full bg-causal-blue-light/20 blur-3xl -bottom-48 -left-24 animate-float animation-delay-2000"></div>
+      {/* Bento Grid Feature Section */}
+      <section className="py-20 md:py-32 relative">
+        <div className="absolute inset-0 bg-causal-blue-dark"></div>
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-causal-blue/40 to-transparent"></div>
+        
+        <div className="container mx-auto px-4 relative z-10">
+          <div className="max-w-4xl mx-auto text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4 bg-gradient-to-r from-white via-causal-text to-causal-text-secondary bg-clip-text text-transparent">Powerful Analytics for Hedge Funds</h2>
+            <p className="text-xl text-causal-text-secondary">Cutting-edge AI analysis that delivers clear insights</p>
+          </div>
+          
+          <BentoGrid className="mb-12">
+            <BentoItem 
+              title="Causal Risk Factors" 
+              description="Surface the top causal risk factors behind every stock move across macro, sentiment, and fundamentals"
+              icon={<BarChart3 className="w-6 h-6" />}
+              size="md"
+            />
+            <BentoItem 
+              title="Sensitivities Analysis" 
+              description="Measure sensitivities to 100+ risk factors like you monitor DV01 and greeks, but for macro and fundamentals"
+              icon={<LineChart className="w-6 h-6" />}
+              size="lg"
+              gradient={true}
+            >
+              <div className="mt-auto pt-4">
+                <img 
+                  src="public/lovable-uploads/e1619181-e923-4492-97a1-9277fae4cb83.png" 
+                  alt="Dashboard visualization" 
+                  className="rounded-md w-full h-auto object-cover border border-causal-blue-light/30"
+                />
+              </div>
+            </BentoItem>
+            <BentoItem 
+              title="Market Move Explanations" 
+              description="Understand market movements with real logic and verifiable data"
+              icon={<Lightbulb className="w-6 h-6" />}
+              size="md"
+            />
+            <BentoItem 
+              title="Data-Driven Decisions" 
+              description="Make informed trading choices based on deep causal insights"
+              icon={<BarChartHorizontal className="w-6 h-6" />}
+              size="md"
+            />
+            <BentoItem 
+              title="Predictive Scenarios" 
+              description="Build what-if scenarios based on causal relationships instead of historical correlations"
+              icon={<TrendingUp className="w-6 h-6" />}
+              size="md"
+            />
+          </BentoGrid>
         </div>
       </section>
 
-      {/* Stock Analyst Section */}
-      <section id="features" className="py-20 md:py-32 border-b border-causal-blue-light/30">
-        <div className="container mx-auto px-4">
+      {/* Stock Analyst Section - Enhanced with glass morphism */}
+      <section id="features" className="py-20 md:py-32 border-y border-causal-blue-light/30 relative">
+        <div className="absolute inset-0 bg-gradient-to-b from-causal-blue-dark to-causal-blue"></div>
+        <div className="container mx-auto px-4 relative z-10">
           <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
             <div className="order-2 md:order-1">
-              <h2 className="text-3xl md:text-4xl font-bold mb-6">AI Stock Analyst</h2>
+              <h2 className="text-3xl md:text-4xl font-bold mb-6 bg-gradient-to-r from-white to-causal-text-secondary bg-clip-text text-transparent">AI Stock Analyst</h2>
               <ul className="space-y-6">
-                <li className="flex items-start gap-3">
-                  <span className="text-causal-accent mt-1"><Check className="w-5 h-5" /></span>
+                <li className="flex items-start gap-3 group">
+                  <span className="text-causal-accent mt-1 bg-causal-blue-dark/60 p-1 rounded-full group-hover:bg-causal-accent/20 transition-all duration-300">
+                    <Check className="w-5 h-5" />
+                  </span>
                   <p className="text-causal-text-secondary">Surfaces the top causal risk factors behind every stock move across macro, sentiment, and fundamentals</p>
                 </li>
-                <li className="flex items-start gap-3">
-                  <span className="text-causal-accent mt-1"><Check className="w-5 h-5" /></span>
+                <li className="flex items-start gap-3 group">
+                  <span className="text-causal-accent mt-1 bg-causal-blue-dark/60 p-1 rounded-full group-hover:bg-causal-accent/20 transition-all duration-300">
+                    <Check className="w-5 h-5" />
+                  </span>
                   <p className="text-causal-text-secondary">Measures sensitivities to 100+ risk factors in the same way you monitor DV01, gamma, and greeks, but for macro and fundamentals</p>
                 </li>
-                <li className="flex items-start gap-3">
-                  <span className="text-causal-accent mt-1"><Check className="w-5 h-5" /></span>
+                <li className="flex items-start gap-3 group">
+                  <span className="text-causal-accent mt-1 bg-causal-blue-dark/60 p-1 rounded-full group-hover:bg-causal-accent/20 transition-all duration-300">
+                    <Check className="w-5 h-5" />
+                  </span>
                   <p className="text-causal-text-secondary">Explains market moves with real logic and data you can investigate</p>
                 </li>
               </ul>
             </div>
-            <div className="order-1 md:order-2 bg-causal-blue p-4 rounded-lg shadow-xl border border-causal-blue-light/50">
+            <div className="order-1 md:order-2 backdrop-blur-xl bg-causal-blue/30 p-4 rounded-lg shadow-xl border border-causal-blue-light/40 group hover:shadow-[0_0_25px_rgba(29,57,129,0.4)] transition-all duration-500">
+              <div className="absolute -inset-0.5 bg-gradient-to-r from-blue-400/30 to-causal-accent/30 rounded-lg opacity-0 group-hover:opacity-100 blur-sm transition-opacity duration-500"></div>
               <img 
                 src="public/lovable-uploads/e1619181-e923-4492-97a1-9277fae4cb83.png" 
                 alt="Stock analysis dashboard" 
-                className="rounded-md w-full"
+                className="rounded-md w-full relative z-10"
               />
             </div>
           </div>
         </div>
       </section>
 
-      {/* AI Advances Section */}
-      <section className="py-20 md:py-32">
-        <div className="container mx-auto px-4">
+      {/* AI Advances Section - Enhanced with glass morphism */}
+      <section className="py-20 md:py-32 relative">
+        <div className="absolute inset-0 bg-gradient-to-b from-causal-blue to-causal-blue-dark"></div>
+        <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-4xl mx-auto text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold mb-6">Using the Latest AI Advances for Stock Analysis</h2>
+            <h2 className="text-3xl md:text-4xl font-bold mb-6 bg-gradient-to-r from-white to-causal-text-secondary bg-clip-text text-transparent">Using the Latest AI Advances for Stock Analysis</h2>
             <p className="text-xl text-causal-text-secondary">We've trained a range of AI Agents to think and act like professional equity analysts. They can:</p>
           </div>
 
@@ -119,12 +190,15 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Benefits Section */}
-      <section id="benefits" className="py-20 md:py-32 gradient-bg border-y border-causal-blue-light/30">
-        <div className="container mx-auto px-4">
+      {/* Benefits Section - Enhanced with glass morphism */}
+      <section id="benefits" className="py-20 md:py-32 relative border-y border-causal-blue-light/30">
+        <div className="absolute inset-0 bg-gradient-to-b from-causal-blue-dark via-causal-blue to-causal-blue-dark"></div>
+        <div className="absolute inset-0 bg-grid-pattern opacity-20"></div>
+        
+        <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-4xl mx-auto">
             <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold mb-6">The Edges You'll Gain</h2>
+              <h2 className="text-3xl md:text-4xl font-bold mb-6 bg-gradient-to-r from-white to-causal-text-secondary bg-clip-text text-transparent">The Edges You'll Gain</h2>
             </div>
 
             <div className="grid md:grid-cols-2 gap-x-12 gap-y-8">
@@ -176,29 +250,66 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Built For Section */}
-      <section id="about" className="py-20 md:py-32">
-        <div className="container mx-auto px-4">
+      {/* Founders Section - New section */}
+      <section className="py-20 md:py-32 relative">
+        <div className="absolute inset-0 bg-gradient-to-b from-causal-blue to-causal-blue-dark"></div>
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-causal-blue-light/5 to-transparent"></div>
+        
+        <div className="container mx-auto px-4 relative z-10">
+          <div className="max-w-4xl mx-auto text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold mb-6 bg-gradient-to-r from-white to-causal-text-secondary bg-clip-text text-transparent">Meet Our Founders</h2>
+            <p className="text-xl text-causal-text-secondary">The expert team behind Causality AI</p>
+          </div>
+          
+          <div className="grid md:grid-cols-3 gap-8">
+            <FounderCard
+              name="Michael Chen"
+              role="CEO & Quantitative Researcher"
+              description="Former quantitative researcher at UBS with 10+ years experience in algorithmic trading strategies and causal discovery methods."
+            />
+            <FounderCard
+              name="Sarah Johnson"
+              role="CTO & AI Engineer"
+              description="AI specialist from MUFG with expertise in machine learning models for financial time series and sentiment analysis."
+            />
+            <FounderCard
+              name="David Rodriguez"
+              role="COO & Finance Strategist"
+              description="Previously at RPL where he led a team developing novel approaches to risk attribution and portfolio construction."
+            />
+          </div>
+        </div>
+      </section>
+
+      {/* Built For Section - Enhanced with glass morphism */}
+      <section id="about" className="py-20 md:py-32 relative border-t border-causal-blue-light/30">
+        <div className="absolute inset-0 bg-gradient-to-b from-causal-blue-dark to-causal-blue"></div>
+        <div className="absolute inset-0 bg-grid-pattern opacity-10"></div>
+        
+        <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl md:text-4xl font-bold mb-6">Built For Hedge Funds, by ex Quants</h2>
+            <h2 className="text-3xl md:text-4xl font-bold mb-6 bg-gradient-to-r from-white to-causal-text-secondary bg-clip-text text-transparent">Built For Hedge Funds, by ex Quants</h2>
             <p className="text-xl text-causal-text-secondary mb-16">Our team has worked amongst the big names</p>
             
-            <div className="flex flex-wrap justify-center items-center gap-12 mb-20 opacity-70">
-              <div className="w-32 h-16 flex items-center justify-center">
-                <span className="text-2xl font-bold text-causal-text-secondary">UBS</span>
+            <div className="flex flex-wrap justify-center items-center gap-12 mb-20">
+              <div className="w-32 h-16 flex items-center justify-center backdrop-blur-md bg-causal-blue-dark/40 rounded-lg border border-causal-blue-light/20 hover:border-causal-blue-light/50 transition-all duration-300">
+                <span className="text-2xl font-bold bg-gradient-to-r from-white to-causal-text-secondary bg-clip-text text-transparent">UBS</span>
               </div>
-              <div className="w-32 h-16 flex items-center justify-center">
-                <span className="text-2xl font-bold text-causal-text-secondary">MUFG</span>
+              <div className="w-32 h-16 flex items-center justify-center backdrop-blur-md bg-causal-blue-dark/40 rounded-lg border border-causal-blue-light/20 hover:border-causal-blue-light/50 transition-all duration-300">
+                <span className="text-2xl font-bold bg-gradient-to-r from-white to-causal-text-secondary bg-clip-text text-transparent">MUFG</span>
               </div>
-              <div className="w-32 h-16 flex items-center justify-center">
-                <span className="text-2xl font-bold text-causal-text-secondary">RPL</span>
+              <div className="w-32 h-16 flex items-center justify-center backdrop-blur-md bg-causal-blue-dark/40 rounded-lg border border-causal-blue-light/20 hover:border-causal-blue-light/50 transition-all duration-300">
+                <span className="text-2xl font-bold bg-gradient-to-r from-white to-causal-text-secondary bg-clip-text text-transparent">RPL</span>
               </div>
             </div>
             
-            <h3 className="text-3xl font-bold mb-6">Gain The Edge</h3>
+            <h3 className="text-3xl font-bold mb-6 bg-gradient-to-r from-causal-accent to-causal-text bg-clip-text text-transparent">Gain The Edge</h3>
             <p className="text-xl text-causal-text-secondary mb-10">We're granting early access to selected hedge funds and equity investors</p>
             
-            <ButtonCTA size="lg" className="font-medium">Apply for Early Access</ButtonCTA>
+            <ButtonCTA size="lg" className="font-medium relative overflow-hidden group">
+              <span className="relative z-10">Apply for Early Access</span>
+              <span className="absolute inset-0 bg-gradient-to-r from-causal-accent to-causal-accent-hover opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
+            </ButtonCTA>
           </div>
         </div>
       </section>
