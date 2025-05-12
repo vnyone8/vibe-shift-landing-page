@@ -1,3 +1,4 @@
+
 import * as React from "react"
 
 import { cn } from "@/lib/utils"
@@ -9,11 +10,15 @@ const Card = React.forwardRef<
   <div
     ref={ref}
     className={cn(
-      "rounded-lg border bg-card text-card-foreground shadow-sm",
+      "rounded-lg border border-causal-blue-light/40 bg-causal-blue/20 text-card-foreground shadow-sm backdrop-blur-xl group relative overflow-hidden",
       className
     )}
     {...props}
-  />
+  >
+    {/* Blue glow effect */}
+    <div className="absolute -inset-1 bg-gradient-to-r from-blue-500/20 to-causal-blue-light/20 rounded-lg blur opacity-0 group-hover:opacity-70 transition duration-500"></div>
+    <div className="relative z-10">{props.children}</div>
+  </div>
 ))
 Card.displayName = "Card"
 
@@ -36,7 +41,7 @@ const CardTitle = React.forwardRef<
   <h3
     ref={ref}
     className={cn(
-      "text-2xl font-semibold leading-none tracking-tight",
+      "text-2xl font-semibold leading-none tracking-tight bg-gradient-to-r from-white to-causal-text-secondary bg-clip-text text-transparent",
       className
     )}
     {...props}
@@ -50,7 +55,7 @@ const CardDescription = React.forwardRef<
 >(({ className, ...props }, ref) => (
   <p
     ref={ref}
-    className={cn("text-sm text-muted-foreground", className)}
+    className={cn("text-sm text-causal-text-secondary", className)}
     {...props}
   />
 ))
