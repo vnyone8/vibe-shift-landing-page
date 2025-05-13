@@ -24,21 +24,21 @@ export function BentoItem({
   return (
     <div 
       className={cn(
-        "relative group backdrop-blur-xl bg-causal-blue/20 border border-causal-blue-light/30 rounded-xl p-6 overflow-hidden",
+        "relative group backdrop-blur-xl bg-black/20 border border-[#00b7c2]/30 rounded-xl p-6 overflow-hidden",
         size === "sm" && "col-span-1 row-span-1",
         size === "md" && "col-span-1 row-span-2 md:col-span-1",
         size === "lg" && "col-span-1 row-span-2 md:col-span-2",
-        gradient && "bg-gradient-to-br from-causal-blue to-causal-blue-dark",
-        "hover:shadow-[0_0_15px_rgba(29,78,216,0.5)] transition-all duration-300",
+        gradient && "bg-gradient-to-br from-black to-[#041b1e]",
+        "hover:shadow-[0_0_15px_rgba(0,183,194,0.5)] transition-all duration-300",
         className
       )}
     >
-      {/* Enhanced blue border glow */}
-      <div className="absolute -inset-[1px] bg-gradient-to-r from-blue-500/40 via-causal-accent/20 to-blue-400/40 rounded-xl opacity-0 group-hover:opacity-100 blur-[1px] transition duration-700 animate-pulse-slow"></div>
+      {/* Enhanced cyan/orange border glow */}
+      <div className="absolute -inset-[1px] bg-gradient-to-r from-[#00b7c2]/40 via-[#FF5500]/20 to-[#00b7c2]/40 rounded-xl opacity-0 group-hover:opacity-100 blur-[1px] transition duration-700 animate-pulse-slow"></div>
       
       <div className="relative z-10 h-full flex flex-col">
         {icon && (
-          <div className="text-causal-accent text-3xl flex-shrink-0 mb-4 transition-transform group-hover:scale-110 duration-300">
+          <div className="text-[#00b7c2] text-3xl flex-shrink-0 mb-4 transition-transform group-hover:scale-110 duration-300">
             {icon}
           </div>
         )}

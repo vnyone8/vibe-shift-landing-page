@@ -10,13 +10,13 @@ const Card = React.forwardRef<
   <div
     ref={ref}
     className={cn(
-      "rounded-lg border border-causal-blue-light/40 bg-causal-blue/20 text-card-foreground shadow-sm backdrop-blur-xl group relative overflow-hidden",
+      "rounded-lg border border-[#FF5500]/40 bg-black/20 text-card-foreground shadow-sm backdrop-blur-xl group relative overflow-hidden",
       className
     )}
     {...props}
   >
-    {/* Blue glow effect */}
-    <div className="absolute -inset-1 bg-gradient-to-r from-blue-500/20 to-causal-blue-light/20 rounded-lg blur opacity-0 group-hover:opacity-70 transition duration-500"></div>
+    {/* Cyan/orange glow effect */}
+    <div className="absolute -inset-1 bg-gradient-to-r from-[#00b7c2]/20 to-[#FF5500]/20 rounded-lg blur opacity-0 group-hover:opacity-70 transition duration-500"></div>
     <div className="relative z-10">{props.children}</div>
   </div>
 ))

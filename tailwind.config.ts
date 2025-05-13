@@ -63,17 +63,17 @@ export default {
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
 				},
-				// Custom colors for Causality AI
+				// Custom colors for Causality AI with updated cyan and orange tones
 				causal: {
-					'blue-dark': '#0A1A3B',
-					'blue': '#152D60',
-					'blue-light': '#1D3981',
-					'accent': '#FFD760',
-					'accent-hover': '#EFC64F',
+					'blue-dark': '#030303',
+					'blue': '#041b1e',
+					'blue-light': '#00b7c2',
+					'accent': '#FF5500',
+					'accent-hover': '#FF7C3F',
 					'text': '#F5F8FF',
 					'text-secondary': '#B8C7E0',
-					'gradient-start': '#081029',
-					'gradient-end': '#152D60',
+					'gradient-start': '#030303',
+					'gradient-end': '#006a77',
 				}
 			},
 			fontFamily: {
@@ -118,7 +118,7 @@ export default {
 			},
 			backgroundImage: {
 				'hero-pattern': "url('/images/hero-bg.png')",
-				'grid-pattern': "linear-gradient(to right, #182554 1px, transparent 1px), linear-gradient(to bottom, #182554 1px, transparent 1px)",
+				'grid-pattern': "linear-gradient(to right, rgba(0, 255, 255, 0.05) 1px, transparent 1px), linear-gradient(to bottom, rgba(0, 255, 255, 0.05) 1px, transparent 1px)",
 			}
 		}
 	},

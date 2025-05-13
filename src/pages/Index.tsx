@@ -18,7 +18,7 @@ const Index = () => {
   }, []);
 
   return (
-    <div className="min-h-screen flex flex-col bg-[#060a14]"> {/* Charcoal black background */}
+    <div className="min-h-screen flex flex-col bg-black"> {/* Charcoal black background */}
       <Navbar />
       
       {/* Hero Section with Lamp Effect */}
@@ -37,7 +37,7 @@ const Index = () => {
           <div className={`transition-all duration-1000 delay-500 ${isVisible ? 'opacity-100' : 'opacity-0 translate-y-10'}`}>
             <ButtonCTA size="lg" className="font-medium relative overflow-hidden group">
               <span className="relative z-10">Apply for Early Access</span>
-              <span className="absolute inset-0 bg-gradient-to-r from-causal-accent to-causal-accent-hover opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
+              <span className="absolute inset-0 bg-gradient-to-r from-[#FF5500] to-[#FF7C3F] opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
             </ButtonCTA>
           </div>
         </div>
@@ -45,8 +45,8 @@ const Index = () => {
 
       {/* Bento Grid Feature Section */}
       <section className="py-20 md:py-32 relative">
-        <div className="absolute inset-0 bg-[#060a14]"></div>
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-causal-blue/40 to-transparent"></div>
+        <div className="absolute inset-0 bg-black"></div>
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-[#00b7c2]/20 to-transparent"></div>
         
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-4xl mx-auto text-center mb-16">
@@ -69,24 +69,24 @@ const Index = () => {
               gradient={true}
             >
               <div className="mt-auto pt-4">
-                <div className="w-full h-48 bg-gradient-to-r from-blue-900/30 to-blue-600/30 rounded-md border border-causal-blue-light/50 p-4 flex flex-col justify-between">
+                <div className="w-full h-48 bg-gradient-to-r from-black/70 to-[#041b1e]/70 rounded-md border border-[#00b7c2]/50 p-4 flex flex-col justify-between">
                   <div className="flex justify-between">
-                    <div className="w-20 h-3 bg-blue-400/50 rounded"></div>
-                    <div className="w-16 h-3 bg-causal-accent/50 rounded"></div>
+                    <div className="w-20 h-3 bg-[#00b7c2]/50 rounded"></div>
+                    <div className="w-16 h-3 bg-[#FF5500]/50 rounded"></div>
                   </div>
                   <div className="flex items-end space-x-2 h-20">
-                    <div className="w-6 h-10 bg-blue-500/50 rounded-t"></div>
-                    <div className="w-6 h-16 bg-blue-500/70 rounded-t"></div>
-                    <div className="w-6 h-8 bg-blue-500/50 rounded-t"></div>
-                    <div className="w-6 h-20 bg-causal-accent/70 rounded-t"></div>
-                    <div className="w-6 h-14 bg-blue-500/70 rounded-t"></div>
-                    <div className="w-6 h-5 bg-blue-500/50 rounded-t"></div>
-                    <div className="w-6 h-12 bg-blue-500/60 rounded-t"></div>
-                    <div className="w-6 h-18 bg-causal-accent/70 rounded-t"></div>
+                    <div className="w-6 h-10 bg-[#00b7c2]/50 rounded-t"></div>
+                    <div className="w-6 h-16 bg-[#00b7c2]/70 rounded-t"></div>
+                    <div className="w-6 h-8 bg-[#00b7c2]/50 rounded-t"></div>
+                    <div className="w-6 h-20 bg-[#FF5500]/70 rounded-t"></div>
+                    <div className="w-6 h-14 bg-[#00b7c2]/70 rounded-t"></div>
+                    <div className="w-6 h-5 bg-[#00b7c2]/50 rounded-t"></div>
+                    <div className="w-6 h-12 bg-[#00b7c2]/60 rounded-t"></div>
+                    <div className="w-6 h-18 bg-[#FF5500]/70 rounded-t"></div>
                   </div>
                   <div className="flex justify-between">
-                    <div className="w-24 h-3 bg-blue-400/50 rounded"></div>
-                    <div className="w-12 h-3 bg-causal-accent/50 rounded"></div>
+                    <div className="w-24 h-3 bg-[#00b7c2]/50 rounded"></div>
+                    <div className="w-12 h-3 bg-[#FF5500]/50 rounded"></div>
                   </div>
                 </div>
               </div>
@@ -114,61 +114,61 @@ const Index = () => {
       </section>
 
       {/* Stock Analyst Section - Enhanced with glass morphism */}
-      <section id="features" className="py-20 md:py-32 border-y border-causal-accent/30 relative">
-        <div className="absolute inset-0 bg-gradient-to-b from-[#060a14] to-causal-blue"></div>
+      <section id="features" className="py-20 md:py-32 border-y border-[#FF5500]/30 relative">
+        <div className="absolute inset-0 bg-gradient-to-b from-black to-[#041b1e]"></div>
         <div className="container mx-auto px-4 relative z-10">
           <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
             <div className="order-2 md:order-1">
               <h2 className="text-3xl md:text-4xl font-bold mb-6 bg-gradient-to-r from-white to-causal-text-secondary bg-clip-text text-transparent">AI Stock Analyst</h2>
               <ul className="space-y-6">
                 <li className="flex items-start gap-3 group">
-                  <span className="text-causal-accent mt-1 bg-causal-blue-dark/60 p-1 rounded-full group-hover:bg-causal-accent/20 transition-all duration-300">
+                  <span className="text-[#FF5500] mt-1 bg-black/60 p-1 rounded-full group-hover:bg-[#FF5500]/20 transition-all duration-300">
                     <Check className="w-5 h-5" />
                   </span>
                   <p className="text-causal-text-secondary">Surfaces the top causal risk factors behind every stock move across macro, sentiment, and fundamentals</p>
                 </li>
                 <li className="flex items-start gap-3 group">
-                  <span className="text-causal-accent mt-1 bg-causal-blue-dark/60 p-1 rounded-full group-hover:bg-causal-accent/20 transition-all duration-300">
+                  <span className="text-[#FF5500] mt-1 bg-black/60 p-1 rounded-full group-hover:bg-[#FF5500]/20 transition-all duration-300">
                     <Check className="w-5 h-5" />
                   </span>
                   <p className="text-causal-text-secondary">Measures sensitivities to 100+ risk factors in the same way you monitor DV01, gamma, and greeks, but for macro and fundamentals</p>
                 </li>
                 <li className="flex items-start gap-3 group">
-                  <span className="text-causal-accent mt-1 bg-causal-blue-dark/60 p-1 rounded-full group-hover:bg-causal-accent/20 transition-all duration-300">
+                  <span className="text-[#FF5500] mt-1 bg-black/60 p-1 rounded-full group-hover:bg-[#FF5500]/20 transition-all duration-300">
                     <Check className="w-5 h-5" />
                   </span>
                   <p className="text-causal-text-secondary">Explains market moves with real logic and data you can investigate</p>
                 </li>
               </ul>
             </div>
-            <div className="order-1 md:order-2 backdrop-blur-xl bg-causal-blue/30 p-4 rounded-lg shadow-xl border border-causal-accent/40 group hover:shadow-[0_0_25px_rgba(29,57,129,0.4)] transition-all duration-500">
-              <div className="absolute -inset-0.5 bg-gradient-to-r from-blue-400/30 to-causal-accent/30 rounded-lg opacity-0 group-hover:opacity-100 blur-sm transition-opacity duration-500"></div>
-              <div className="w-full h-64 bg-gradient-to-br from-blue-900/40 to-blue-600/40 rounded-md border border-causal-blue-light/50 p-4 flex flex-col justify-between relative z-10">
+            <div className="order-1 md:order-2 backdrop-blur-xl bg-black/30 p-4 rounded-lg shadow-xl border border-[#FF5500]/40 group hover:shadow-[0_0_25px_rgba(0,183,194,0.4)] transition-all duration-500">
+              <div className="absolute -inset-0.5 bg-gradient-to-r from-[#00b7c2]/30 to-[#FF5500]/30 rounded-lg opacity-0 group-hover:opacity-100 blur-sm transition-opacity duration-500"></div>
+              <div className="w-full h-64 bg-gradient-to-br from-black/70 to-[#041b1e]/70 rounded-md border border-[#00b7c2]/50 p-4 flex flex-col justify-between relative z-10">
                 <div className="flex justify-between mb-4">
                   <div className="space-y-2">
-                    <div className="w-20 h-3 bg-blue-400/50 rounded"></div>
+                    <div className="w-20 h-3 bg-[#00b7c2]/50 rounded"></div>
                     <div className="w-32 h-3 bg-causal-text-secondary/30 rounded"></div>
                   </div>
                   <div className="flex space-x-2">
-                    <div className="w-8 h-8 rounded-full bg-causal-accent/40"></div>
-                    <div className="w-8 h-8 rounded-full bg-blue-500/40"></div>
+                    <div className="w-8 h-8 rounded-full bg-[#FF5500]/40"></div>
+                    <div className="w-8 h-8 rounded-full bg-[#00b7c2]/40"></div>
                   </div>
                 </div>
                 
                 <div className="flex-1 flex items-end space-x-1">
                   <div className="flex-1 flex items-end">
                     <div className="w-full flex items-end space-x-1">
-                      <div style={{height: '20%'}} className="w-full bg-blue-500/30 rounded-t"></div>
-                      <div style={{height: '60%'}} className="w-full bg-blue-500/40 rounded-t"></div>
-                      <div style={{height: '40%'}} className="w-full bg-blue-500/30 rounded-t"></div>
-                      <div style={{height: '80%'}} className="w-full bg-causal-accent/50 rounded-t"></div>
-                      <div style={{height: '50%'}} className="w-full bg-blue-500/40 rounded-t"></div>
-                      <div style={{height: '30%'}} className="w-full bg-blue-500/30 rounded-t"></div>
-                      <div style={{height: '70%'}} className="w-full bg-blue-500/40 rounded-t"></div>
-                      <div style={{height: '90%'}} className="w-full bg-causal-accent/50 rounded-t"></div>
-                      <div style={{height: '45%'}} className="w-full bg-blue-500/30 rounded-t"></div>
-                      <div style={{height: '60%'}} className="w-full bg-blue-500/40 rounded-t"></div>
-                      <div style={{height: '20%'}} className="w-full bg-blue-500/30 rounded-t"></div>
+                      <div style={{height: '20%'}} className="w-full bg-[#00b7c2]/30 rounded-t"></div>
+                      <div style={{height: '60%'}} className="w-full bg-[#00b7c2]/40 rounded-t"></div>
+                      <div style={{height: '40%'}} className="w-full bg-[#00b7c2]/30 rounded-t"></div>
+                      <div style={{height: '80%'}} className="w-full bg-[#FF5500]/50 rounded-t"></div>
+                      <div style={{height: '50%'}} className="w-full bg-[#00b7c2]/40 rounded-t"></div>
+                      <div style={{height: '30%'}} className="w-full bg-[#00b7c2]/30 rounded-t"></div>
+                      <div style={{height: '70%'}} className="w-full bg-[#00b7c2]/40 rounded-t"></div>
+                      <div style={{height: '90%'}} className="w-full bg-[#FF5500]/50 rounded-t"></div>
+                      <div style={{height: '45%'}} className="w-full bg-[#00b7c2]/30 rounded-t"></div>
+                      <div style={{height: '60%'}} className="w-full bg-[#00b7c2]/40 rounded-t"></div>
+                      <div style={{height: '20%'}} className="w-full bg-[#00b7c2]/30 rounded-t"></div>
                     </div>
                   </div>
                 </div>
@@ -178,10 +178,10 @@ const Index = () => {
                     <div className="w-full h-4 bg-causal-text-secondary/20 rounded"></div>
                   </div>
                   <div className="col-span-1">
-                    <div className="w-full h-4 bg-blue-400/30 rounded"></div>
+                    <div className="w-full h-4 bg-[#00b7c2]/30 rounded"></div>
                   </div>
                   <div className="col-span-1">
-                    <div className="w-full h-4 bg-causal-accent/30 rounded"></div>
+                    <div className="w-full h-4 bg-[#FF5500]/30 rounded"></div>
                   </div>
                 </div>
               </div>
