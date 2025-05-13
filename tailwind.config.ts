@@ -65,15 +65,15 @@ export default {
 				},
 				// Custom colors for Causality AI with updated cyan and orange tones
 				causal: {
-					'blue-dark': '#030303',
-					'blue': '#041b1e',
-					'blue-light': '#00b7c2',
+					'blue-dark': '#0a0a0a',
+					'blue': '#121212',
+					'blue-light': '#00d8ff',
 					'accent': '#FF5500',
 					'accent-hover': '#FF7C3F',
 					'text': '#F5F8FF',
 					'text-secondary': '#B8C7E0',
-					'gradient-start': '#030303',
-					'gradient-end': '#006a77',
+					'gradient-start': '#0a0a0a',
+					'gradient-end': '#121212',
 				}
 			},
 			fontFamily: {
@@ -118,7 +118,8 @@ export default {
 			},
 			backgroundImage: {
 				'hero-pattern': "url('/images/hero-bg.png')",
-				'grid-pattern': "linear-gradient(to right, rgba(0, 255, 255, 0.05) 1px, transparent 1px), linear-gradient(to bottom, rgba(0, 255, 255, 0.05) 1px, transparent 1px)",
+				'grid-pattern': "linear-gradient(to right, rgba(0, 216, 255, 0.05) 1px, transparent 1px), linear-gradient(to bottom, rgba(0, 216, 255, 0.05) 1px, transparent 1px)",
+				'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
 			}
 		}
 	},

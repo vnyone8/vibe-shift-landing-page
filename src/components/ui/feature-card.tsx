@@ -11,7 +11,7 @@ export function FeatureCard({ icon, title, description }: FeatureCardProps) {
   return (
     <div className="backdrop-blur-xl bg-black/30 border border-[#FF5500]/60 rounded-xl p-6 hover:shadow-xl transition-all duration-300 group relative overflow-hidden animate-border-glow">
       {/* Enhanced glow effect */}
-      <div className="absolute -inset-1 bg-gradient-to-r from-[#00b7c2]/30 to-[#FF5500]/40 rounded-xl blur opacity-0 group-hover:opacity-100 transition duration-500"></div>
+      <div className="absolute -inset-1 bg-gradient-to-r from-[#00d8ff]/30 to-[#FF5500]/40 rounded-xl blur opacity-0 group-hover:opacity-100 transition duration-500"></div>
       
       <div className="relative z-10">
         <div className="text-[#FF5500] mb-4 text-3xl bg-black/60 p-3 rounded-lg inline-block group-hover:bg-black/80 transition-colors">

@@ -1,20 +1,19 @@
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 @layer base {
   :root {
-    --background: 224 76% 3%;
+    --background: 220 20% 3%;
     --foreground: 210 40% 98%;
 
-    --card: 224 76% 5%;
+    --card: 220 20% 5%;
     --card-foreground: 210 40% 98%;
 
-    --popover: 224 76% 5%;
+    --popover: 220 20% 5%;
     --popover-foreground: 210 40% 98%;
 
-    --primary: 180 100% 50%;
+    --primary: 180 100% 45%;
     --primary-foreground: 210 40% 98%;
 
     --secondary: 188 95% 15%;
@@ -23,7 +22,7 @@
     --muted: 188 95% 15%;
     --muted-foreground: 215 20.2% 75%;
 
-    --accent: 12 100% 55%;
+    --accent: 12 100% 50%;
     --accent-foreground: 224 76% 5%;
 
     --destructive: 0 62.8% 30.6%;
@@ -35,9 +34,9 @@
 
     --radius: 0.5rem;
 
-    --sidebar-background: 224 76% 5%;
+    --sidebar-background: 220 20% 5%;
     --sidebar-foreground: 210 40% 98%;
-    --sidebar-primary: 180 100% 50%;
+    --sidebar-primary: 180 100% 45%;
     --sidebar-primary-foreground: 210 40% 98%;
     --sidebar-accent: 188 30% 15%;
     --sidebar-accent-foreground: 210 40% 98%;
@@ -52,17 +51,17 @@
   }
 
   body {
-    @apply bg-[#030303] text-causal-text font-sans;
+    @apply bg-[#0a0a0a] text-causal-text font-sans;
   }
 
   .gradient-bg {
-    background: linear-gradient(135deg, #030303 0%, #041b1e 100%);
+    background: linear-gradient(135deg, #0a0a0a 0%, #121212 100%);
   }
   
   .grid-pattern {
     background-size: 40px 40px;
-    background-image: linear-gradient(to right, rgba(0, 255, 255, 0.05) 1px, transparent 1px),
-                      linear-gradient(to bottom, rgba(0, 255, 255, 0.05) 1px, transparent 1px);
+    background-image: linear-gradient(to right, rgba(0, 216, 255, 0.05) 1px, transparent 1px),
+                      linear-gradient(to bottom, rgba(0, 216, 255, 0.05) 1px, transparent 1px);
   }
 }
 
@@ -106,18 +105,18 @@
 @keyframes glow-pulse {
   0%, 100% {
     opacity: 0.5;
-    box-shadow: 0 0 10px rgba(0, 255, 255, 0.5);
+    box-shadow: 0 0 10px rgba(0, 216, 255, 0.5);
   }
   50% {
     opacity: 0.3;
-    box-shadow: 0 0 20px rgba(0, 255, 255, 0.3);
+    box-shadow: 0 0 20px rgba(0, 216, 255, 0.3);
   }
 }
 
 @keyframes border-glow {
   0%, 100% {
-    border-color: rgba(0, 255, 255, 0.4);
-    box-shadow: 0 0 10px rgba(0, 255, 255, 0.4);
+    border-color: rgba(0, 216, 255, 0.4);
+    box-shadow: 0 0 10px rgba(0, 216, 255, 0.4);
   }
   50% {
     border-color: rgba(255, 85, 0, 0.4);
@@ -147,14 +146,18 @@
   }
   
   .glass-card {
-    @apply backdrop-blur-xl bg-opacity-20 bg-black border border-cyan-400/30;
+    @apply backdrop-blur-xl bg-black/20 border border-cyan-400/30 shadow-[0_0_15px_rgba(0,216,255,0.2)];
   }
   
-  .blue-glow {
-    @apply shadow-[0_0_15px_rgba(0,255,255,0.5)];
+  .glass-card-orange {
+    @apply backdrop-blur-xl bg-black/20 border border-orange-500/30 shadow-[0_0_15px_rgba(255,85,0,0.2)];
   }
   
-  .blue-glow-hover {
-    @apply hover:shadow-[0_0_20px_rgba(0,255,255,0.7)];
+  .cyan-glow {
+    @apply shadow-[0_0_15px_rgba(0,216,255,0.5)];
+  }
+  
+  .orange-glow {
+    @apply shadow-[0_0_15px_rgba(255,85,0,0.5)];
   }
 }

@@ -16,7 +16,7 @@ const Card = React.forwardRef<
     {...props}
   >
     {/* Cyan/orange glow effect */}
-    <div className="absolute -inset-1 bg-gradient-to-r from-[#00b7c2]/20 to-[#FF5500]/20 rounded-lg blur opacity-0 group-hover:opacity-70 transition duration-500"></div>
+    <div className="absolute -inset-1 bg-gradient-to-r from-[#00d8ff]/20 to-[#FF5500]/20 rounded-lg blur opacity-0 group-hover:opacity-70 transition duration-500"></div>
     <div className="relative z-10">{props.children}</div>
   </div>
 ))
