@@ -1,4 +1,3 @@
-
 import { useEffect, useState } from "react";
 import { Navbar } from "@/components/navbar";
 import { Footer } from "@/components/footer";
@@ -23,7 +22,7 @@ const Index = () => {
       <Navbar />
       
       {/* Hero Section with Lamp Effect */}
-      <LampEffect className="pt-20 pb-0">
+      <LampEffect className="pt-24 pb-24 min-h-screen">
         <div className="max-w-4xl mx-auto text-center">
           <h1 
             className={`text-4xl md:text-6xl font-bold mb-6 transition-all duration-1000 bg-gradient-to-r from-white via-causal-text to-causal-text-secondary bg-clip-text text-transparent ${isVisible ? 'opacity-100' : 'opacity-0 translate-y-10'}`}
@@ -51,7 +50,7 @@ const Index = () => {
         
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-4xl mx-auto text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4 bg-gradient-to-r from-white via-causal-text to-causal-text-secondary bg-clip-text text-transparent">Powerful Analytics for Hedge Funds</h2>
+            <h2 className="text-3xl md:text-4xl font-bold mb-4 bg-gradient-to-r from-white to-causal-text-secondary bg-clip-text text-transparent">Powerful Analytics for Hedge Funds</h2>
             <p className="text-xl text-causal-text-secondary">Cutting-edge AI analysis that delivers clear insights</p>
           </div>
           
@@ -325,7 +324,7 @@ const Index = () => {
         </div>
       </section>
       
-      {/* Contact Form Section */}
+      {/* Contact Form Section - Moved above the Built For Section */}
       <section className="py-20 md:py-32 relative border-t border-causal-accent/30">
         <div className="absolute inset-0 bg-gradient-to-b from-causal-blue to-[#060a14]"></div>
         <div className="absolute inset-0 bg-grid-pattern opacity-20"></div>

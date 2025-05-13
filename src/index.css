@@ -1,4 +1,3 @@
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -52,12 +51,11 @@
   }
 
   body {
-    @apply bg-causal-blue-dark text-causal-text font-sans;
-    background-color: #06101f; /* Darker background */
+    @apply bg-[#060a14] text-causal-text font-sans;
   }
 
   .gradient-bg {
-    background: linear-gradient(135deg, #06101f 0%, #0A1A3B 100%);
+    background: linear-gradient(135deg, #060a14 0%, #0A1A3B 100%);
   }
   
   .grid-pattern {
